@@ -19,7 +19,7 @@ Example function:
 `
 Uncertainty.get_RSS("x/y")
 `
->`sqrt(U_a**2*x**2/(a**4*y**2*z**2) + U_x**2/(a**2*y**2*z**2) + U_y**2*x**2/(a**2*y**4*z**2) + U_z**2*x**2/(a**2*y**2*z**4))`
+>`sqrt(U_x**2/y**4 + 4*U_y**2*x**2/y**6)`
 ## Module 2: Scrape Functions - Conor Hayden
 
 Consists of functions that allows the user to either determine the material properties from a material name, or determine the material based on calculated material properties. This module is also used directly by the GUI by providing the user with an easy way to determine the desired information based on simple inputs. This is all accomplished using web scraping. 
