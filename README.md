@@ -36,7 +36,7 @@ libraries used: beatifulsoup, requests, pandas
 
 libraries used: tkinter, matplotlib
 
-This is module is the main way the user is expected to interact with the package. It can be run in the command line or in an IDE. All of the user inputs can be typed into the GUI using this package. The GUI consists of four different tabs for the user to use:
+This module is the main way the user is expected to interact with the package. It can be run in the command line or in an IDE. All of the user inputs can be typed into the GUI using this package. The GUI consists of four different tabs for the user to use:
 
 **Tab 1**: Stress-Strain diagram/material properties calculator. The user inputs specimen dimensions and optionally mass/volume and uploads a csv file of UTM data consisting of load and strain from an extensometer. In this tab the user can select what material properties they want to calculate. Additionally, there is a button that will generate the stress strain curve from the uploaded file if the user desires it. The curve will provide various key strength properties of the specimen material. 
 
