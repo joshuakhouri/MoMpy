@@ -142,21 +142,25 @@ def theMC():
     x_1 = float(x1.get())
     x_2 = float(x2.get())
     x_3 = float(x3.get())
-    x_4 = float(x4.get())
+    x_4= float(x4.get())
+    x_5 = float(x5.get())
     Ux_1 = float(U_x1.get())
     Ux_2 = float(U_x2.get())
     Ux_3 = float(U_x3.get())
     Ux_4 = float(U_x4.get())
+    Ux_5 = float(U_x5.get())
     y_1 = float(y1.get())
     y_2 = float(y2.get())
     y_3 = float(y3.get())
     y_4 = float(y4.get())
+    y_5 = float(y5.get())
     Uy_1 = float(U_y1.get())
     Uy_2 = float(U_y2.get())
     Uy_3 = float(U_y3.get())
     Uy_4 = float(U_y4.get())
-    x, y = unc.getMonteCarlo((x_1,x_2,x_3,x_4), (y_1,y_2,y_3,y_4), 
-                      (Ux_1, Ux_2, Ux_3, Ux_4), (Uy_1, Uy_2, Uy_3, Uy_4), slope = True)#Monte Carlo simulation
+    Uy_5 = float(U_y5.get())
+    x, y = unc.getMonteCarlo((x_1,x_2,x_3,x_4, x_5), (y_1,y_2,y_3,y_4, y_5), 
+                      (Ux_1, Ux_2, Ux_3, Ux_4, Ux_5), (Uy_1, Uy_2, Uy_3, Uy_4, Uy_5), slope = True)#Monte Carlo simulation
     label=tk.Label(tab3, text='The slope is ' + str(x)+' with a 95% confidence interval of ' + str(y))
     label.pack(anchor=tk.S)
     
@@ -300,6 +304,9 @@ x3.pack(anchor = tk.W)
 x4 = tk.Entry(tab3, font = 10)
 x4.pack(anchor = tk.W)
 
+x5 = tk.Entry(tab3, font = 10)
+x5.pack(anchor = tk.W)
+
 label9 = tk.Label(tab3, text = 'Enter x Uncertainties')
 label9.pack(anchor = tk.W)
 
@@ -314,6 +321,9 @@ U_x3.pack(anchor = tk.W)
 
 U_x4 = tk.Entry(tab3, font = 10)
 U_x4.pack(anchor = tk.W)
+
+U_x5 = tk.Entry(tab3, font = 10)
+U_x5.pack(anchor = tk.W)
 
 
 label10 = tk.Label(tab3, text = 'Enter y values')
@@ -331,6 +341,9 @@ y3.place(x = 400, y = 114)
 y4 = tk.Entry(tab3, font = 10)
 y4.place(x = 400, y = 136)
 
+y5 = tk.Entry(tab3, font = 10)
+y5.place(x = 400, y = 158)
+
 label11 = tk.Label(tab3, text = 'Enter y Uncertainties')
 label11.place(x = 400, y = 158)
 
@@ -345,6 +358,9 @@ U_y3.place(x = 400, y = 224)
 
 U_y4 = tk.Entry(tab3, font = 10)
 U_y4.place(x = 400, y = 246)
+
+U_y5 = tk.Entry(tab3, font = 10)
+U_y5.place(x = 400, y = 268)
 
 submit3 = tk.Button(tab3, text = 'Submit', command = theMC)
 submit3.pack()
