@@ -345,22 +345,22 @@ y5 = tk.Entry(tab3, font = 10)
 y5.place(x = 400, y = 158)
 
 label11 = tk.Label(tab3, text = 'Enter y Uncertainties')
-label11.place(x = 400, y = 158)
+label11.place(x = 400, y = 180)
 
 U_y1 = tk.Entry(tab3, font = 10)
-U_y1.place(x = 400, y = 180)
+U_y1.place(x = 400, y = 202)
 
 U_y2 = tk.Entry(tab3, font = 10)
-U_y2.place(x = 400, y = 202)
+U_y2.place(x = 400, y = 224)
 
 U_y3 = tk.Entry(tab3, font = 10)
-U_y3.place(x = 400, y = 224)
+U_y3.place(x = 400, y = 246)
 
 U_y4 = tk.Entry(tab3, font = 10)
-U_y4.place(x = 400, y = 246)
+U_y4.place(x = 400, y = 268)
 
 U_y5 = tk.Entry(tab3, font = 10)
-U_y5.place(x = 400, y = 268)
+U_y5.place(x = 400, y = 290)
 
 submit3 = tk.Button(tab3, text = 'Submit', command = theMC)
 submit3.pack()
