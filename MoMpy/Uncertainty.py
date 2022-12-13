@@ -229,7 +229,7 @@ def getStressStrain(filename, area, mass = 1, volume = 1, MC_sim = False):
 
         return data["stress"], data["strain"], slope/1000, uncert/1000, Sigma_y, Strain_y, SM, Sigma_b, Strain_b, S, Sigma_U, Strain_U
     else:
-        return data["stress"], data["strain"], E/1000, Sigma_y, Strain_y, SM, Sigma_b, Strain_b, S, Sigma_U, Strain_U
+        return E/1000,Sigma_y, SM, S, Sigma_U, data["stress"], data["strain"] , Strain_y, Sigma_b, Strain_b, Strain_U
     
 def MonteCarlo(expr, N = 10000,  **kwargs):
     
