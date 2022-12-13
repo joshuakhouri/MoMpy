@@ -172,7 +172,7 @@ def Scrape():
         for index, row in x.iterrows():
             mylist  =  [row["Material"], row["Youngs Modulus (GPa)"]]
             label14 = tk.Label(materialwindow, text = "The material is " + str(mylist[0]) + "with a Youngs Modulus of "  + 
-                             str(mylist[1])+ " MPa")
+                             str(mylist[1])+ " GPa")
             label14.pack()   
     elif (material.get() == 1):
         materialwindow = tk.Tk()
