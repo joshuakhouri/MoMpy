@@ -7,7 +7,7 @@ This package aims to assist students in analyzing their UTM data for Mechanics o
 
 ## Module 1: Uncertainty - Israel Chinn
 
-calculate the propagated uncertainty of an algebraic expression given individual variable values and their respective uncertainties. This module is used directly by the GUI to create a user friendly uncertainty calculator, generate a stress strain curve simply by importing a csv file with material dimensions, and creates a monte carlo simulation for linear regressions. 
+Calculate the propagated uncertainty of an algebraic expression given individual variable values and their respective uncertainties. This module is used directly by the GUI to create a user friendly uncertainty calculator, generate a stress strain curve simply by importing a csv file with material dimensions, and creates a monte carlo simulation for linear regressions. 
 
 This is not the main module the user interacts with, but it is designed to be high-level and can be used on its own in a Jupyter notebook/IDE. 
 
@@ -20,14 +20,21 @@ Example function:
 Uncertainty.get_RSS("x/y")
 `
 >`sqrt(U_x**2/y**4 + 4*U_y**2*x**2/y**6)`
+
+libraries used: numpy, scipy, sympy, pandas, random
+
 ## Module 2: Scrape Functions - Conor Hayden
 
 Consists of functions that allows the user to either determine the material properties from a material name, or determine the material based on calculated material properties. This module is also used directly by the GUI by providing the user with an easy way to determine the desired information based on simple inputs. This is all accomplished using web scraping. 
 
-`From MoMpy import Scrape Functions
+`From MoMpy import Webscraper
 `
 
+libraries used: beatifulsoup, requests, pandas
+
 ## Module 3: GUI - Joshua Khouri
+
+libraries used: tkinter, matplotlib
 
 This is module is the main way the user is expected to interact with the package. It can be run in the command line or in an IDE. All of the user inputs can be typed into the GUI using this package. The GUI consists of four different tabs for the user to use:
 
@@ -38,4 +45,11 @@ This is module is the main way the user is expected to interact with the package
 **Tab 3**: Monte Carlo Simulator. The user is prompted to give 4 data points in the x-axis and y-axis and their respective uncertainties, and the calculator will determine the linear regression and uncertainty using 10,000 simulations using the Monte Carlo method. 
 
 **Tab 4**: Get material information. The user is prompted to either input material property values to identify the material, or the user can input the material name to get the material(s) properties.
+
+## How to run the GUI:
+
+The GUI is executed by running the script for mygui.py. This can be done in command line.
+
+While in the `MoMpy` directory, enter in the command line: 
+`python mygui.py`
 
