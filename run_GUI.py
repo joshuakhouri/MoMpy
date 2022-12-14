@@ -163,6 +163,12 @@ def theMC():
     
     
 def Scrape():
+    '''Finds material best suited from property selected
+    Args:
+        int: Property value
+    Returns: 
+        Material best suited for value
+    '''
     if (material.get() == 0):
         materialwindow = tk.Tk()
         x  =  web.Get_MatE(float(thevalue.get()))
@@ -194,6 +200,13 @@ def Scrape():
         
         
 def matprop():
+    '''Finds properties of material selected
+    Args:
+        str: Material name
+    Returns: 
+        properties of material
+     If no value shows then the property doesnt exist
+    '''
     x=web.Get_Prop(matname.get())
     for index, row in x.iterrows():
         mylist  =  [row["Material"], row["Youngs Modulus (GPa)"],
@@ -201,7 +214,7 @@ def matprop():
                     row["Yield Strength (MPa)"]]
         label14 = tk.Label(tab4, text = "The material is " + str(mylist[0]) +
                            "\n with a Youngs Modulus of "  + 
-                         str(mylist[1]) + " MPa \nand a Ultimate Tensile Strength of "  + 
+                         str(mylist[1]) + " GPa \nand a Ultimate Tensile Strength of "  + 
                        str(mylist[2])+ " MPa and a Yield Strength of "  + 
                      str(mylist[3])+ " MPa")
     label14.pack()
@@ -386,7 +399,5 @@ matname.pack(anchor = tk.W)
 
 submit5 = tk.Button(tab4, text = 'Submit', command = matprop)
 submit5.pack(anchor = tk.W)
-
-
 
 root.mainloop()
