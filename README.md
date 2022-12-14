@@ -44,7 +44,7 @@ This module is the main way the user is expected to interact with the package. I
 
 **Tab 3**: Monte Carlo Simulator. The user is prompted to give 5 data points in the x-axis and y-axis and their respective uncertainties, and the calculator will determine the linear regression and uncertainty using 10,000 simulations using the Monte Carlo method. 
 
-**Tab 4**: Get material information. The user is prompted to either input material property values to identify the material, or the user can input the material name to get the material(s) properties. Modulus of Elasticity is entered in GPa, the remaining properties are to be entered in MPa.  
+**Tab 4**: Get material information. The user is prompted to either input material property values to identify the material, or the user can input the material name to get the material properties (first letter should be capitalized, e.g. "Aluminum:"). Modulus of Elasticity is entered in GPa, the remaining properties are to be entered in MPa.  
 
 ## How to run the GUI:
 
