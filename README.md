@@ -50,6 +50,6 @@ This module is the main way the user is expected to interact with the package. I
 
 The GUI is executed by running the script for mygui.py. This can be done in command line.
 
-While in the `MoMpy` directory, enter in the command line: 
-`python mygui.py`
+While in the `MoMpy-main` directory, enter in the command line: 
+`python run_GUI.py`
 
