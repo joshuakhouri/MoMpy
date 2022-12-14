@@ -196,11 +196,11 @@ def Scrape():
 def matprop():
     x=web.Get_Prop(matname.get())
     for index, row in x.iterrows():
-        mylist  =  [row["Material"], row["Yield Strength (MPa)"],
+        mylist  =  [row["Material"], row["Youngs Modulus (GPa)"],
                     row["Ultimate Tensile Strength (MPa)"],  
                     row["Yield Strength (MPa)"]]
         label14 = tk.Label(tab4, text = "The material is " + str(mylist[0]) +
-                           "\n with a Yield Strength of "  + 
+                           "\n with a Youngs Modulus of "  + 
                          str(mylist[1]) + " MPa \nand a Ultimate Tensile Strength of "  + 
                        str(mylist[2])+ " MPa and a Yield Strength of "  + 
                      str(mylist[3])+ " MPa")
